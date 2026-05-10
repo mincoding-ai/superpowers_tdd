@@ -127,7 +127,7 @@ def test_retries_failed_operations_3_times():
 ```
 명확한 이름, 실제 동작 테스트, 하나의 관심사
 
-#### <Bad>
+#### [Bad]
 
 **Java**
 ```java
@@ -204,7 +204,7 @@ pytest tests/test_retry_operation.py
 
 테스트를 통과시킬 가장 단순한 코드를 작성한다.
 
-#### <Good>
+#### [Good]
 **Java**
 ```java
 public <T> T retryOperation(Supplier<T> fn) {
@@ -247,7 +247,7 @@ def retry_operation(fn):
 통과하기에 충분한 최소한의 코드
 
 
-#### <Bad>
+#### [Bad]
 **Java**
 ```java
 public <T> T retryOperation(
