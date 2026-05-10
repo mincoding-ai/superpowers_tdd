@@ -32,7 +32,7 @@ Mock을 추가하거나 테스트 유틸리티를 작성할 때 참조합니다.
 ### 레퍼런스 참조
 
 `SKILL.md` 내에서 안티패턴 문서를 참조합니다.
-
+SKILL.md 에는 아래와 같은 멘트를 확인할 수 있습니다.
 ```
 When adding mocks or test utilities, read @testing-anti-patterns.md
 ```
