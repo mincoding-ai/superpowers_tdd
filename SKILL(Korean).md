@@ -72,10 +72,9 @@ digraph tdd_cycle {
 
 어떤 동작을 해야 하는지 보여주는 최소한의 테스트 하나를 작성한다.
 
-<Good>
+#### <Good>
     
 **Java**
-    
 ```java
 @Test
 @DisplayName("실패한 작업을 3번 재시도한다")
@@ -127,9 +126,9 @@ def test_retries_failed_operations_3_times():
     assert attempts == 3
 ```
 명확한 이름, 실제 동작 테스트, 하나의 관심사
-</Good>
 
-<Bad>
+#### <Bad>
+
 **Java**
 ```java
 @Test
@@ -168,7 +167,7 @@ def test_retry_works(mocker):
     assert mock_op.call_count == 3
 ```
 모호한 이름, 코드가 아닌 mock을 테스트
-</Bad>
+
 
 **요건:**
 - 하나의 동작
@@ -205,7 +204,7 @@ pytest tests/test_retry_operation.py
 
 테스트를 통과시킬 가장 단순한 코드를 작성한다.
 
-<Good>
+#### <Good>
 **Java**
 ```java
 public <T> T retryOperation(Supplier<T> fn) {
@@ -246,9 +245,9 @@ def retry_operation(fn):
                 raise
 ```
 통과하기에 충분한 최소한의 코드
-</Good>
 
-<Bad>
+
+#### <Bad>
 **Java**
 ```java
 public <T> T retryOperation(
@@ -286,7 +285,7 @@ def retry_operation(
     pass
 ```
 과도한 설계
-</Bad>
+
 
 기능을 추가하거나, 다른 코드를 리팩토링하거나, 테스트 범위를 넘어 "개선"하지 마라.
 
