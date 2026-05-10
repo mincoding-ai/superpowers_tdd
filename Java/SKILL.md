@@ -118,7 +118,7 @@ Vague name, tests mock not code
 **MANDATORY. Never skip.**
 
 ```bash
-./mvnw test -Dtest=RetryOperationTest
+./gradlew test --tests "RetryOperationTest"
 ```
 
 Confirm:
@@ -171,7 +171,7 @@ Don't add features, refactor other code, or "improve" beyond the test.
 **MANDATORY.**
 
 ```bash
-./mvnw test -Dtest=RetryOperationTest
+./gradlew test --tests "RetryOperationTest"
 ```
 
 Confirm:
@@ -304,8 +304,9 @@ void rejects_empty_email() {
 
 **Verify RED**
 ```bash
-$ ./mvnw test -Dtest=FormTest#rejects_empty_email
-FAIL: expected: <Email required> but was: <null>
+$ ./gradlew test --tests "FormTest.rejects_empty_email"
+FormTest > rejects_empty_email FAILED
+    AssertionFailedError: expected: <Email required> but was: <null>
 ```
 
 **GREEN**
@@ -320,8 +321,8 @@ public FormResult submitForm(FormData data) {
 
 **Verify GREEN**
 ```bash
-$ ./mvnw test -Dtest=FormTest#rejects_empty_email
-BUILD SUCCESS
+$ ./gradlew test --tests "FormTest.rejects_empty_email"
+BUILD SUCCESSFUL
 ```
 
 **REFACTOR**

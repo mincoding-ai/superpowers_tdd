@@ -180,7 +180,7 @@ def test_retry_works(mocker):
 
 **Java**
 ```bash
-./mvnw test -Dtest=RetryOperationTest
+./gradlew test --tests "RetryOperationTest"
 ```
 **C++**
 ```bash
@@ -295,7 +295,7 @@ def retry_operation(
 
 **Java**
 ```bash
-./mvnw test -Dtest=RetryOperationTest
+./gradlew test --tests "RetryOperationTest"
 ```
 **C++**
 ```bash
@@ -453,8 +453,9 @@ def test_rejects_empty_email():
 
 **Java**
 ```bash
-$ ./mvnw test -Dtest=FormTest#rejects_empty_email
-FAIL: expected: <Email required> but was: <null>
+$ ./gradlew test --tests "FormTest.rejects_empty_email"
+FormTest > rejects_empty_email FAILED
+    AssertionFailedError: expected: <Email required> but was: <null>
 ```
 **C++**
 ```bash
@@ -502,8 +503,8 @@ def submit_form(data):
 
 **Java**
 ```bash
-$ ./mvnw test -Dtest=FormTest#rejects_empty_email
-BUILD SUCCESS
+$ ./gradlew test --tests "FormTest.rejects_empty_email"
+BUILD SUCCESSFUL
 ```
 **C++**
 ```bash
