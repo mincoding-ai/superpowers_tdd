@@ -74,6 +74,7 @@ digraph tdd_cycle {
 
 <Good>
 **Java**
+    
 ```java
 @Test
 @DisplayName("실패한 작업을 3번 재시도한다")
