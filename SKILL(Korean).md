@@ -73,6 +73,7 @@ digraph tdd_cycle {
 어떤 동작을 해야 하는지 보여주는 최소한의 테스트 하나를 작성한다.
 
 <Good>
+    
 **Java**
     
 ```java
