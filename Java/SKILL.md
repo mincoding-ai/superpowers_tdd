@@ -72,7 +72,7 @@ digraph tdd_cycle {
 
 Write one minimal test showing what should happen.
 
-<Good>
+#### [Good]
 ```java
 @Test
 @DisplayName("retries failed operations 3 times")
@@ -90,9 +90,9 @@ void retries_failed_operations_3_times() {
 }
 ```
 Clear name, tests real behavior, one thing
-</Good>
 
-<Bad>
+
+#### [Bad]
 ```java
 @Test
 void retry_works() {
@@ -106,7 +106,7 @@ void retry_works() {
 }
 ```
 Vague name, tests mock not code
-</Bad>
+
 
 **Requirements:**
 - One behavior
@@ -134,7 +134,7 @@ Confirm:
 
 Write simplest code to pass the test.
 
-<Good>
+#### [Good]
 ```java
 public <T> T retryOperation(Supplier<T> fn) {
     for (int i = 0; i < 3; i++) {
@@ -148,9 +148,9 @@ public <T> T retryOperation(Supplier<T> fn) {
 }
 ```
 Just enough to pass
-</Good>
 
-<Bad>
+
+#### [Bad]
 ```java
 public <T> T retryOperation(
     Supplier<T> fn,
@@ -162,7 +162,7 @@ public <T> T retryOperation(
 }
 ```
 Over-engineered
-</Bad>
+
 
 Don't add features, refactor other code, or "improve" beyond the test.
 

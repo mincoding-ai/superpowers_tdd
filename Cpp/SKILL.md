@@ -72,7 +72,7 @@ digraph tdd_cycle {
 
 Write one minimal test showing what should happen.
 
-<Good>
+#### [Good]
 ```cpp
 TEST(RetryOperationTest, RetriesFailedOperations3Times) {
     int attempts = 0;
@@ -88,9 +88,9 @@ TEST(RetryOperationTest, RetriesFailedOperations3Times) {
 }
 ```
 Clear name, tests real behavior, one thing
-</Good>
 
-<Bad>
+
+#### [Bad]
 ```cpp
 TEST(RetryOperationTest, RetryWorks) {
     MockOperation mock_op;
@@ -103,7 +103,7 @@ TEST(RetryOperationTest, RetryWorks) {
 }
 ```
 Vague name, tests mock not code
-</Bad>
+
 
 **Requirements:**
 - One behavior
@@ -131,7 +131,7 @@ Confirm:
 
 Write simplest code to pass the test.
 
-<Good>
+#### [Good]
 ```cpp
 template<typename T>
 T retryOperation(std::function<T()> fn) {
@@ -146,9 +146,9 @@ T retryOperation(std::function<T()> fn) {
 }
 ```
 Just enough to pass
-</Good>
 
-<Bad>
+
+#### [Bad]
 ```cpp
 template<typename T>
 T retryOperation(
@@ -161,7 +161,7 @@ T retryOperation(
 }
 ```
 Over-engineered
-</Bad>
+
 
 Don't add features, refactor other code, or "improve" beyond the test.
 

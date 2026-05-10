@@ -72,7 +72,7 @@ digraph tdd_cycle {
 
 Write one minimal test showing what should happen.
 
-<Good>
+#### [Good]
 ```python
 def test_retries_failed_operations_3_times():
     attempts = 0
@@ -90,9 +90,9 @@ def test_retries_failed_operations_3_times():
     assert attempts == 3
 ```
 Clear name, tests real behavior, one thing
-</Good>
 
-<Bad>
+
+#### [Bad]
 ```python
 def test_retry_works(mocker):
     mock_op = mocker.Mock(side_effect=[
@@ -104,7 +104,7 @@ def test_retry_works(mocker):
     assert mock_op.call_count == 3
 ```
 Vague name, tests mock not code
-</Bad>
+
 
 **Requirements:**
 - One behavior
@@ -132,7 +132,7 @@ Confirm:
 
 Write simplest code to pass the test.
 
-<Good>
+#### [Good]
 ```python
 def retry_operation(fn):
     for i in range(3):
@@ -143,9 +143,9 @@ def retry_operation(fn):
                 raise
 ```
 Just enough to pass
-</Good>
 
-<Bad>
+
+#### [Bad]
 ```python
 def retry_operation(
     fn,
@@ -157,7 +157,7 @@ def retry_operation(
     pass
 ```
 Over-engineered
-</Bad>
+
 
 Don't add features, refactor other code, or "improve" beyond the test.
 
